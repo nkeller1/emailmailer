@@ -7,10 +7,10 @@ feature 'user can register' do
 
     expect(current_path).to eq(registration_path)
 
-    fill_in :first_name, 'Nancy'
-    fill_in :last_name, 'Drew'
-    fill_in :email, "nancydrew@detective.com"
-    fill_in :password, 'test123'
+    fill_in :user_first_name, with: 'Nancy'
+    fill_in :user_last_name, with: 'Drew'
+    fill_in :user_email, with: "nancydrew@detective.com"
+    fill_in :user_password, with: 'test123'
     click_on 'Submit'
 
     expect(current_path).to eq(advice_path)
