@@ -14,7 +14,7 @@ feature 'user can register' do
     click_on 'Submit'
 
     expect(current_path).to eq(advice_path)
-    expect(page).to have_conent('Send a bit of advice!')
+    expect(page).to have_content('Send a Bit of Advice!')
   end
   scenario 'unsuccessfully by not inputting info' do
 

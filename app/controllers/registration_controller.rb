@@ -4,8 +4,8 @@ class RegistrationController < ApplicationController
   end
 
   def create
-    @user = User.new(user_params)
-    if @user.save
+    user = User.new(user_params)
+    if user.save(user_params)
       redirect_to advice_path
     else
       redirect_to registration_path, alert: "Something went wrong, please try again."
@@ -14,6 +14,6 @@ class RegistrationController < ApplicationController
 
   private
     def user_params
-      params.permit(:first_name, :last_name, :email, :password)
+      params.require(:user).permit(:first_name, :last_name, :email, :password)
     end
 end
