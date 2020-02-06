@@ -10,8 +10,16 @@
   </head>
 
   <body>
+    <nav>
+      <% if logged_in? %>
+        <%= link_to "Log out" %>
+      <% else %>
+        <%= link_to "Register as a User", registration_path %>
+        <%= link_to "I already have an account", "/login" %>
+      <% end %>
+    </nav>
     <% flash.each do |type, msg| %>
-      <div>
+      <div class="<%= type %>">
         <%= msg %>
       </div>
     <% end %>
