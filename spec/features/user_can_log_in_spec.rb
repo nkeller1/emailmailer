@@ -7,7 +7,7 @@ feature 'user can log in' do
                        email: 'nancydrew@detective.com',
                        password: 'test123')
 
-    visit '/login'
+    visit login_path
 
     expect(current_path).to eq(login_path)
 
