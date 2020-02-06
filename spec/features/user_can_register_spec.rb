@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature 'user can register' do
-  scenario 'by inputing their info' do
+  scenario 'successfully by inputing their info' do
 
     visit '/registration'
 
@@ -16,4 +16,16 @@ feature 'user can register' do
     expect(current_path).to eq(advice_path)
     expect(page).to have_conent('Send a bit of advice!')
   end
+  scenario 'unsuccessfully by not inputting info' do
+
+    visit '/registration'
+
+    expect(current_path).to eq(registration_path)
+
+    click_on 'Submit'
+
+    expect(current_path).to eq(registration_path)
+    expect(page).to have_content('Something went wrong, please try again.')
+  end
+
 end
