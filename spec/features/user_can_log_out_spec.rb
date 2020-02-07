@@ -13,13 +13,23 @@ feature 'user can logout' do
 
     fill_in :email, with: "nancydrew@detective.com"
     fill_in :password, with: 'test123'
-    click_on 'Log In'
+    click_on 'Submit'
 
-    expect(page).to have_content("Log out")
+    expect(page).to have_link('Send Advice')
+    expect(page).to have_link('Log out')
+
+    expect(page).to_not have_link('Welcome')
+    expect(page).to_not have_link('Register as a user')
+    expect(page).to_not have_link('Log in')
 
     click_on "Log out"
 
     expect(current_path).to eq(root_path)
-    expect(page).to have_content('Log in')
+    expect(page).to have_link('Welcome')
+    expect(page).to have_link('Register as a user')
+    expect(page).to have_link('Log in')
+
+    expect(page).to_not have_link('Send Advice')
+    expect(page).to_not have_link('Log out')
   end
 end
