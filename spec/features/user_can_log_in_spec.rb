@@ -17,7 +17,7 @@ feature 'user can log in' do
 
     expect(current_path).to eq(advice_path)
     expect(page).to have_content("Welcome, #{user.first_name}!")
-    expect(page).to have_content('Send a Bit of Advice!')
+    expect(page).to have_content('Please send a bit of advice to your friend.')
   end
   scenario 'unsuccessful if user enters incorrect password' do
     user = User.create(first_name: 'Nancy',

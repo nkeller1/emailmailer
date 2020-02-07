@@ -7,11 +7,10 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(email: params[:email])
     if authenticated?(user)
-      session[:user_id] = user.id
-      flash[:success] = "Welcome, #{user.first_name}!"
+      set_session(user)
       redirect_to advice_path
     else
-      flash[:error] = "Sorry, your credentials are bad."
+      flash[:danger] = "Sorry, something went wrong. Please try again."
       render :new
     end
   end

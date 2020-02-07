@@ -6,9 +6,11 @@ class RegistrationController < ApplicationController
   def create
     user = User.new(user_params)
     if user.save(user_params)
+      set_session(user)
       redirect_to advice_path
     else
-      redirect_to registration_path, alert: "Something went wrong, please try again."
+      flash[:danger] = "Sorry, something went wrong. Please try again."
+      redirect_to registration_path
     end
   end
 

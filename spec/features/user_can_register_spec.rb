@@ -14,7 +14,7 @@ feature 'user can register' do
     click_on 'Register'
 
     expect(current_path).to eq(advice_path)
-    expect(page).to have_content('Send a Bit of Advice!')
+    expect(page).to have_content('Please send a bit of advice to your friend.')
   end
   scenario 'unsuccessfully by not inputting info' do
 
@@ -25,7 +25,7 @@ feature 'user can register' do
     click_on 'Register'
 
     expect(current_path).to eq(registration_path)
-    expect(page).to have_content('Something went wrong, please try again.')
+    expect(page).to have_content('Sorry, something went wrong. Please try again.')
   end
 
 end
