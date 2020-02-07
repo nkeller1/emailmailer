@@ -7,11 +7,11 @@ feature 'user can register' do
 
     expect(current_path).to eq(registration_path)
 
-    fill_in :user_first_name, with: 'Nancy'
-    fill_in :user_last_name, with: 'Drew'
-    fill_in :user_email, with: "nancydrew@detective.com"
-    fill_in :user_password, with: 'test123'
-    click_on 'Submit'
+    fill_in 'user[first_name]', with: 'Nancy'
+    fill_in 'user[last_name]', with: 'Drew'
+    fill_in 'user[email]', with: "nancydrew@detective.com"
+    fill_in 'user[password]', with: 'test123'
+    click_on 'Register'
 
     expect(current_path).to eq(advice_path)
     expect(page).to have_content('Send a Bit of Advice!')
@@ -22,7 +22,7 @@ feature 'user can register' do
 
     expect(current_path).to eq(registration_path)
 
-    click_on 'Submit'
+    click_on 'Register'
 
     expect(current_path).to eq(registration_path)
     expect(page).to have_content('Something went wrong, please try again.')
