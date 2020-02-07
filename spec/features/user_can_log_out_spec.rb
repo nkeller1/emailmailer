@@ -9,7 +9,7 @@ feature 'user can logout' do
 
     visit root_path
 
-    click_on 'I already have an account'
+    click_on 'Log in'
 
     fill_in :email, with: "nancydrew@detective.com"
     fill_in :password, with: 'test123'
@@ -20,6 +20,6 @@ feature 'user can logout' do
     click_on "Log out"
 
     expect(current_path).to eq(root_path)
-    expect(page).to have_content('I already have an account')
+    expect(page).to have_content('Log in')
   end
 end
