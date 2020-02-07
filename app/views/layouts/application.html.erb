@@ -16,10 +16,11 @@
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
       <div class="container">
         <div class="navbar-nav">
-          <%= link_to "Welcome", '/', class: "nav-link" %>
           <% if logged_in? %>
+            <%= link_to "Send Advice", '/advice', class: "nav-link"%>
             <%= link_to "Log out", '/logout', method: 'delete', class: "nav-link"%>
           <% else %>
+            <%= link_to "Welcome", '/', class: "nav-link" %>
             <%= link_to "Register as a user", registration_path, class: "nav-link" %>
             <%= link_to "Log in", "/login", class: "nav-link" %>
           <% end %>
