@@ -13,7 +13,7 @@ feature 'user can log in' do
 
     fill_in :email, with: "nancydrew@detective.com"
     fill_in :password, with: 'test123'
-    click_on 'Log In'
+    click_on 'Submit'
 
     expect(current_path).to eq(advice_path)
     expect(page).to have_content("Welcome, #{user.first_name}!")
@@ -31,7 +31,7 @@ feature 'user can log in' do
 
     fill_in :email, with: "nancydrew@detective.com"
     fill_in :password, with: 'test'
-    click_on 'Log In'
+    click_on 'Submit'
 
     expect(current_path).to eq(login_path)
   end
