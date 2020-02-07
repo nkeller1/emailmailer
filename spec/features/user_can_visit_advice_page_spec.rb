@@ -19,7 +19,12 @@ feature 'user visits the advice page' do
     end
 
     scenario 'and can fill out form to send advice to friend' do
+      fill_in :friends_name, with: 'Leroy Brown'
+      fill_in :friends_email, with: "encylopediabrown@detective.com"
+      click_on 'Send Advice'
 
+      expect(current_path).to eq(advice_path)
+      expect(page).to have_content("Thank you for sending a bit of advice.")
     end
   end
 
