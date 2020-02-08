@@ -1,0 +1,65 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.adviceslip.com/advice
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.0.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 08 Feb 2020 01:03:52 GMT
+      Server:
+      - Apache/2.4.29 (Ubuntu)
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Referrer-Policy:
+      - no-referrer-when-downgrade
+      X-Mod-Pagespeed:
+      - 1.13.35.2-0
+      Vary:
+      - Accept-Encoding
+      Content-Security-Policy:
+      - 'default-src ''self''  *.myfonts.net *.myfonts.com  *.adviceslip.com adviceslip.com  *.google-analytics.com
+        *.google.com *.googleapis.com *.gstatic.com  *.bootstrapcdn.com  *.youtube.com
+        *.vimeo.com *.funnyordie.com *.last.fm  *.twitter.com *.facebook.com *.facebook.net
+        *.pinterest.com *.twimg.com  *.cloudfront.net *.stripe.com; script-src ''self''
+        data: ''unsafe-inline'' ''unsafe-eval''  *.adviceslip.com adviceslip.com  *.google-analytics.com
+        *.google.com *.googleapis.com *.gstatic.com  *.bootstrapcdn.com  *.twitter.com
+        *.facebook.com *.facebook.net *.pinterest.com *.twimg.com  *.cloudfront.net
+        *.stripe.com; style-src ''self'' ''unsafe-inline''  *.myfonts.net *.myfonts.com  *.googleapis.com
+        *.gstatic.com  *.bootstrapcdn.com *.twitter.com *.twimg.com; img-src * data:
+        blob:; font-src * ''self'' data:'
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Headers:
+      - origin, x-requested-with, content-type
+      Access-Control-Allow-Methods:
+      - PUT, GET, POST, OPTIONS
+      Cache-Control:
+      - max-age=0, no-cache, must-revalidate
+      Content-Length:
+      - '85'
+      Content-Type:
+      - text/html;charset=UTF-8
+    body:
+      encoding: ASCII-8BIT
+      string: '{"slip": {"advice":"A problem shared is a problem halved.","slip_id":"106"}}'
+    http_version: null
+  recorded_at: Sat, 08 Feb 2020 01:03:53 GMT
+recorded_with: VCR 5.1.0

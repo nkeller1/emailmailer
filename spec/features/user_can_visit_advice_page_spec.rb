@@ -18,7 +18,7 @@ feature 'user visits the advice page' do
       expect(page).to have_content('Please send a bit of advice to your friend.')
     end
 
-    scenario 'and can fill out form to send advice to friend' do
+    scenario 'and can fill out form to send advice to friend', :vcr do
       fill_in :friends_name, with: 'Leroy Brown'
       fill_in :friends_email, with: "encylopediabrown@detective.com"
       click_button 'Send Advice'

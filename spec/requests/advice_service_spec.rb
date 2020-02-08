@@ -1,5 +1,5 @@
 describe 'Advice Service' do
-  it 'retrives advice successfully' do
+  it 'retrives advice successfully', :vcr do
     service = AdviceService.new
     response = service.advice_info
 
