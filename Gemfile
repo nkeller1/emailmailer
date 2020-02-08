@@ -11,6 +11,7 @@ gem 'bcrypt'
 gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'faraday'
 
 group :development, :test do
   gem 'pry'
