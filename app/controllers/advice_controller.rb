@@ -5,16 +5,6 @@ class AdviceController < ApplicationController
   end
 
   def create
-    @advice = generate_advice
+    @advice = AdviceGenerator.new
   end
-
-  private
-    def service
-       AdviceService.new
-    end
-
-    def generate_advice
-      advice_data = service.advice_info
-      Advice.new(advice_data)
-    end
 end
