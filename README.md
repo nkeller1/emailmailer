@@ -1,24 +1,14 @@
-# README
+# A bit of Advice
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repo is used as an example for Backend Module 3 email lesson.
 
-Things you may want to cover:
+## Setup Instructions
 
-* Ruby version
+```shell
+$ git clone https://github.com/turingschool-examples/a_bit_of_advice.git a_bit_of_advice
+$ cd a_bit_of_advice
+$ bundle
+$ rake db:create
+```
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`rails s` to visit localhost:3000
