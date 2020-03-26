@@ -12,6 +12,7 @@ gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'faraday'
+gem 'figaro'
 
 group :development, :test do
   gem 'pry'
